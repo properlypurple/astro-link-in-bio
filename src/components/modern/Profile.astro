@@ -1,0 +1,16 @@
+---
+import config from '../../../config.js';
+---
+
+<div class="flex flex-col items-center space-y-4 p-4">
+  <img
+    src={config.user.profileImage}
+    alt="Profile"
+    class="w-32 h-32 rounded-full border-4 border-gray-200 dark:border-gray-700 shadow-lg"
+  />
+  <h1 class="text-3xl font-bold text-gray-900 dark:text-white">{config.user.name}</h1>
+  <p class="text-lg text-gray-600 dark:text-gray-300 mb-2">Software Engineer</p>
+  <p class="text-center text-gray-500 dark:text-gray-400 max-w-md">
+    {config.user.bio}
+  </p>
+</div>

@@ -1,0 +1,25 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="bg-white/90 backdrop-blur-sm shadow-md w-full py-3 px-4">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="text-gray-800 font-bold">Link in Bio</div>
+    <div class="relative group">
+      <select
+        id="themeSelect"
+        class="bg-white text-gray-800 font-semibold py-2 px-4 rounded border border-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none cursor-pointer pr-8"
+        onchange="window.location.href = this.value"
+      >
+        <option value="/" selected={currentPath === "/"}>Default Theme</option>
+        <option value="/pastel" selected={currentPath === "/pastel"}>Pastel Theme</option>
+        <option value="/modern" selected={currentPath === "/modern"}>Modern Theme</option>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</nav>

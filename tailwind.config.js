@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./src/**/*.{astro,js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       keyframes: {

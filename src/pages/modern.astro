@@ -1,0 +1,17 @@
+---
+import ModernLayout from '../layouts/ModernLayout.astro';
+import Profile from '../components/modern/Profile.astro';
+import SocialLinks from '../components/modern/SocialLinks.astro';
+import ProductLink from '../components/modern/ProductLink.astro';
+import LinkCard from '../components/modern/LinkCard.astro';
+import config from '../configs/modern-config.js';
+---
+
+<ModernLayout title="Modern Theme - Link in Bio">
+  <Profile />
+  <SocialLinks />
+  <div class="space-y-6 mt-8">
+    {config.products.map((product) => <ProductLink product={product} />)}
+    {config.links.map((link) => <LinkCard link={link} />)}
+  </div>
+</ModernLayout>
