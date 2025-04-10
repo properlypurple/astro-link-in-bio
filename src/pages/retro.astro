@@ -1,0 +1,17 @@
+---
+import RetroLayout from '../layouts/RetroLayout.astro';
+import Profile from '../components/retro/Profile.astro';
+import SocialLinks from '../components/retro/SocialLinks.astro';
+import LinkCard from '../components/retro/LinkCard.astro';
+import ProductLink from '../components/retro/ProductLink.astro';
+import config from '../configs/retro-config.js';
+---
+
+<RetroLayout title="Retro Theme - Link in Bio">
+  <Profile />
+  <SocialLinks />
+  <div class="space-y-6 mt-8">
+    {config.links.map((link) => <LinkCard link={link} />)}
+    {config.products.map((product) => <ProductLink product={product} />)}
+  </div>
+</RetroLayout>

@@ -1,0 +1,34 @@
+---
+import config from '../../configs/retro-config.js';
+
+const animations = `
+  @keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-4px) rotate(-2deg); }
+    75% { transform: translateY(4px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+`;
+---
+
+<style set:html={animations}></style>
+
+<div class="flex justify-center flex-wrap gap-6 my-8">
+  {
+    config.socialLinks.map((link, index) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class={`bg-${link.color} p-4 rounded transform transition-all duration-300 animate-[float_3s_ease-in-out_infinite] hover:scale-125 hover:rotate-12 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] group`}
+        style={`animation-delay: ${index * 0.15}s`}
+      >
+        <i
+          class={`fab fa-${link.platform} text-2xl text-black transition-transform duration-300 group-hover:scale-110`}
+          aria-hidden="true"
+        />
+        <span class="sr-only">{link.platform}</span>
+      </a>
+    ))
+  }
+</div>

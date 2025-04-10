@@ -1,0 +1,71 @@
+---
+interface Props {
+  product: {
+    title: string;
+    description: string;
+    url: string;
+    price: number;
+    includePriceOnSite: boolean;
+    image: string;
+    color: string;
+  };
+}
+
+const { product } = Astro.props;
+
+const animations = `
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+`;
+---
+
+<style set:html={animations}></style>
+
+<a
+  href={product.url}
+  class="block w-full max-w-md mx-auto mb-8 group relative"
+>
+  <div class={`bg-${product.color} rounded-lg overflow-hidden relative`}>
+    <!-- Static border effect -->
+    <div class="absolute inset-0 rounded-lg border-2 border-white opacity-50"></div>
+
+    <!-- Image container -->
+    <div class="relative overflow-hidden">
+      <img
+        src={product.image}
+        alt={product.title}
+        class="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110"
+      />
+      {product.includePriceOnSite && (
+        <div class="absolute top-4 right-4 bg-black text-retro-yellow px-4 py-2 rounded-full font-bold transform -rotate-12 group-hover:rotate-0 transition-transform duration-300 group-hover:animate-[glitch_0.3s_ease-in-out_infinite]">
+          ${product.price}
+        </div>
+      )}
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 relative z-10">
+      <h3 class="text-2xl font-bold text-black mb-2 group-hover:animate-[glitch_0.3s_ease-in-out]">
+        {product.title}
+      </h3>
+      <p class="text-black/80">
+        {product.description}
+      </p>
+
+      <!-- Retro decorative elements -->
+      <div class="absolute bottom-2 right-2">
+        <div class="flex gap-1">
+          {Array.from({ length: 3 }).map(() => (
+            <div class="w-2 h-2 bg-white animate-[blink_1s_ease-in-out_infinite]"></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
