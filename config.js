@@ -56,7 +56,7 @@ const config = {
   //     image: productImage,
   //   },
     // Add more products as needed
-  ],
+  //],
 };
 
 export const analytics = {
