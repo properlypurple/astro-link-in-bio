@@ -1,5 +1,5 @@
 // @ts-check
-import profileImage from './src/images/profilepic.png?url';
+import profileImage from './src/images/avatar.png?url';
 import backgroundImage from './src/images/backgrounds/watercolor-blue-green.png?url';
 import productImage from './src/images/product1.png?url';
 
@@ -8,7 +8,7 @@ const config = {
   user: {
     name: "Kavya Gokul",
     bio: "AuDHD queer weird person, maker of machines, electronic things, strange art, and so on",
-    //profileImage: profileImage,
+    profileImage: profileImage,
   },
   background: {
     color: "#f0f0f0",
