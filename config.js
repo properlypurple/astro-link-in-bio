@@ -6,9 +6,9 @@ import productImage from './src/images/product1.png?url';
 /** @type {import('./src/types').SiteConfig} */
 const config = {
   user: {
-    name: "Cory Trimm",
-    bio: "Serial builder of things - software, hardware, and everything in between. This is my little link in bio project built with Astro and Tailwind.",
-    profileImage: profileImage,
+    name: "Kavya Gokul",
+    bio: "AuDHD queer weird person, maker of machines, electronic things, strange art, and so on",
+    //profileImage: profileImage,
   },
   background: {
     color: "#f0f0f0",
@@ -17,64 +17,44 @@ const config = {
   socialLinks: [
     {
       platform: "instagram",
-      url: "https://instagram.com/journey.unknown",
+      url: "https://instagram.com/properlypurple",
       icon: "camera-retro",
     },
     {
-      platform: "threads",
-      url: "https://threads.net/@journey.unknown",
-      icon: "threads",
-    },
-    {
-      platform: "linkedin",
-      url: "https://linkedin.com/in/cory-trimm",
-      icon: "linkedin",
-    },
-    {
-      platform: "spotify",
-      url: "https://spotify.com",
-      icon: "spotify",
-    },
-    {
-      platform: "snapchat",
-      url: "https://snapchat.com",
-      icon: "snapchaat",
-    },
-    {
-      platform: "tiktok",
-      url: "https://tiktok.com",
-      icon: "tiktok",
+      platform: "mastodon",
+      url: "https://tech.lgbt/@properlypurple",
+      icon: "mastodon",
     },
     // Add more social links as needed
     // Search for icons here - https://fontawesome.com/search
   ],
   links: [
     {
-      title: "Use This Template",
-      url: "https://github.com/ctrimm/astro-link-in-bio-theme",
+      title: "Github",
+      url: "https://github.com/properlypurple",
       icon: "code",
     },
     {
       title: "My Personal Web Site",
-      url: "https://corytrimm.com",
+      url: "https://properlypurple.com",
       icon: "globe",
     },
     {
-      title: "Join My YouTube Channel",
-      url: "https://youtube.com/c/corytrimm",
+      title: "Join My Maker YouTube Channel",
+      url: "https://www.youtube.com/@ThePurpleMaker",
       icon: "play",
     },
     // Add more links as needed
   ],
-  products: [
-    {
-      title: "Digital Product",
-      description: "Description of your digital product",
-      url: "https://inshortpod.com",
-      price: 19.99,
-      includePriceOnSite: true,
-      image: productImage,
-    },
+  // products: [
+  //   {
+  //     title: "Digital Product",
+  //     description: "Description of your digital product",
+  //     url: "https://inshortpod.com",
+  //     price: 19.99,
+  //     includePriceOnSite: true,
+  //     image: productImage,
+  //   },
     // Add more products as needed
   ],
 };
