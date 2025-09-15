@@ -46,7 +46,7 @@ const config = {
     },
     // Add more links as needed
   ],
-  // products: [
+  products: [
   //   {
   //     title: "Digital Product",
   //     description: "Description of your digital product",
@@ -56,7 +56,7 @@ const config = {
   //     image: productImage,
   //   },
     // Add more products as needed
-  //],
+  ],
 };
 
 export const analytics = {
