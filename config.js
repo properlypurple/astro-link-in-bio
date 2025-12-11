@@ -40,6 +40,10 @@ const config = {
       icon: "globe",
     },
     {
+      title: "Interview at Shecancode",
+      url: "https://shecancode.io/meet-kavya-gokul-happiness-engineer-at-automattic/",
+      icon: "globe",
+    {
       title: "Join My Maker YouTube Channel",
       url: "https://www.youtube.com/@ThePurpleMaker",
       icon: "play",
